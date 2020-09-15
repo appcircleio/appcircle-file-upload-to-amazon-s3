@@ -29,6 +29,13 @@ else
 	run_command("unzip awscliv2.zip && ./aws/install")
 end
 
-run_command("aws s3 cp #{ac_input_file_path} s3://#{ac_aws_bucket_name}")
+timestamp = Time.now.utc.strftime("%Y%m%d%H%M%S")
+aws3_upload_url = "s3://#{ac_aws_bucket_name}/#{timestamp}"
+run_command("aws s3 cp #{ac_input_file_path} #{aws3_upload_url}")
+
+#Write Environment Variable
+open(ENV['AC_ENV_FILE_PATH'], 'a') { |f|
+  f.puts "AC_AWS_UPLOAD_URL=#{aws3_upload_url}"
+}
 
 exit 0
