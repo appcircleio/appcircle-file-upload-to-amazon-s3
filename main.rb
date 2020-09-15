@@ -30,7 +30,7 @@ else
 end
 
 timestamp = Time.now.utc.strftime("%Y%m%d%H%M%S")
-aws3_upload_url = "s3://#{ac_aws_bucket_name}/#{timestamp}/#{ac_input_file_path}"
+aws3_upload_url = "s3://#{ac_aws_bucket_name}/#{timestamp}/"
 run_command("aws s3 cp #{ac_input_file_path} #{aws3_upload_url}")
 
 #Write Environment Variable
