@@ -12,4 +12,4 @@ Optional Input Variables
 - `$AWS_BUCKET_REGION`: Amazon S3 bucket region. Defaults to `us-east-1`
 
 Output Variables
-- `$AC_AWS_UPLOAD_URL`: Amazon S3 upload url (s3://your-bucket-name/timestamp/your-upload-file)
+- `$AC_AWS_UPLOAD_URL`: Amazon S3 upload url (s3://your-bucket-name/timestamp)
