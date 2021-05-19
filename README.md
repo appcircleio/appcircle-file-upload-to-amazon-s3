@@ -1,4 +1,4 @@
-# Appcircle File Upload to Amazon S3
+# Appcircle Upload Files to Amazon S3
 
 This step uploads a file to Amazon S3. 
 
