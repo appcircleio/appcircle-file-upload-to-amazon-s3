@@ -30,6 +30,15 @@ inputs:
   isRequired: false
   title: Amazon S3 Folder Path in Bucket
   description:  Amazon S3 Folder Path in Bucket
+- key: "AWS_ENDPOINT_URL_S3"
+  isRequired: false
+  title: S3 Endpoint URL
+  description: "Endpoint of an S3-compatible storage such as MinIO, for example https://minio.example.com:9000. Leave empty for Amazon S3."
+- key: "AC_AWS_CLI_BASE_URL"
+  defaultValue: "https://awscli.amazonaws.com"
+  isRequired: false
+  title: AWS CLI Download Base URL
+  description: "Base URL to download AWS CLI v2 from when it is not installed. Point it to your artifact proxy in air-gapped environments, for example https://nexus.example.com/repository/awscli."
 outputs:
 - key: "AC_AWS_UPLOAD_URL"
   defaultValue: $AC_AWS_UPLOAD_URL
